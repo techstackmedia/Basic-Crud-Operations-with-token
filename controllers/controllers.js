@@ -13,6 +13,7 @@ const postSignup = async (req, res) => {
   if (error) {
     return res.status(400).send(error.details[0].message);
   }
+
   const user = new User({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -24,9 +25,9 @@ const postSignup = async (req, res) => {
 
   try {
     await user.save();
-    res.status(200).send(user);
+    return res.status(200).send(user);
   } catch (err) {
-    res.status(400).send(err);
+    return res.status(400).send(err);
   }
 };
 
