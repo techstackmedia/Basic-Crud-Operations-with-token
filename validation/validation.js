@@ -18,12 +18,12 @@ const signUpValidation = (data) => {
 };
 
 const loginValidation = (data) => {
-  const schema = {
-    email: Joi.string().min(3).email(),
-    password: Joi.string().min(6).required(),
-  };
+  const schema = Joi.object({
+    email: Joi.string().min(3).email().required(),
+    password: Joi.string().min(3).required(),
+  });
 
-  return Joi.validate(data, schema);
+  return schema.validate(data);
 };
 
 module.exports = {
