@@ -7,7 +7,8 @@ const signUpValidation = (data) => {
     dob: Joi.string().required(),
     email: Joi.string().min(3).email().required(),
     phoneNumber: Joi.string()
-      .length(11)
+      .min(6)
+      .max(15)
       .pattern(/^[0-9]+$/)
       .required(),
     password: Joi.string().min(3).required(),

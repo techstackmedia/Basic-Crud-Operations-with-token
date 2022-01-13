@@ -12,18 +12,17 @@ const userSchema = new mongoose.Schema(
     },
     dob: {
       type: Date,
-      require: false,
-      trim: false,
+      require: true,
+      trim: true,
     },
     email: {
       type: String,
-      required: false,
+      required: true,
       unique: true,
     },
     phoneNumber: {
       type: Number,
       required: true,
-      unique: true,
     },
     password: {
       type: String,
