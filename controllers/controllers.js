@@ -59,14 +59,13 @@ const postLogin = async (req, res) => {
   res
     .header("auth-token", token)
     .send(
-      `<p>Verified: Your token is ${token}<p><p>Account Number is ${Math.floor(
+      `<p>Verified: Your token is ${token}</p><p>Account Number is ${Math.floor(
         Math.random() * 99999999999
       )}</p>`
     );
 };
 
 const postCreatedAcc = (req, res) => {
-  // res.send("postCreatedAcc");
   res.json({
     posts: {
       title: "Account Number",
