@@ -69,7 +69,6 @@ const postCreatedAcc = (req, res) => {
   res.json({
     posts: {
       title: "Account Number",
-      acctNo: Math.random,
     },
   });
 };
