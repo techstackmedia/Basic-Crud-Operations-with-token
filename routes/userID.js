@@ -1,4 +1,5 @@
 const express = require("express");
+const verify = require("../database/config/verifyToken");
 
 const router = express.Router();
 const {
@@ -10,7 +11,7 @@ const {
 } = require("../controllers/controllers");
 
 router
-  .route("/:accountNumber")
+  .route("/:accountNumber", verify)
   .get(getBalanceByAccNum)
   .get(getBalanceByID)
   .get(getTransactionByAccNum)

@@ -74,6 +74,10 @@ const postCreatedAcc = (req, res) => {
   });
 };
 
+/*
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWUwMzc5ODQwYzljOGQyZDFiNmY3N2UiLCJpYXQiOjE2NDIxMDQ3NTB9.WBMMrwjU2a40-knqHVSHqoomJCp160D-gQTjyicMhlM
+*/
+
 const getBalanceByAccNum = (req, res) => {
   res.send("getBalanceByAccNum");
 };
